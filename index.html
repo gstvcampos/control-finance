@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Finance</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <!-- ////////////// CSS //////////// -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/text.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/index.css" />
+
+    <!-- ///////// script ///////// -->
+    <script defer type="module" src="./src/scripts/index.js"></script>
+  </head>
+  <body>
+    <main id="app">
+
+      <header class="header__container">
+        <h2 class="title1 bold"><span>Control</span> Finance</h2>
+        <button class="primary__button modal__button">Registrar novo valor</button>
+      </header>
+
+      <dialog class="modal__controller">
+        <div class="modal__container">
+          <div class="modal__header">
+            <h3 class="title2 bold">Registro de valor</h3>
+            <button class="close__modal">X</button>
+          </div>
+
+          <p class="text1 regular">Digite o valor e em seguida aperte no botão 
+            referente ao tipo do valor</p>
+          
+          <div class="modal__value">
+            <label class="text1 medium" for="">Valor</label>
+            <input id="value" name="value" type="number">
+          </div>
+
+          <div class="buttons__radio">
+            <p class="text1 medium">Tipo de valor</p>
+
+            <div class="button">
+              <input type="radio" id="t00" name="value-type" value="0"/>
+              <label for="t00">Entrada</label>
+            </div>
+            
+            <div class="button">
+              <input type="radio" id="t01" name="value-type" value="1"/>
+              <label for="t01">Saída</label>
+            </div>
+
+          </div>
+
+          <div class="footer__modal">
+            <button class="close__modal">Cancelar</button>
+            <button class="primary__button submit" type="submit">Inserir valor</button>
+          </div>
+        </div>
+      </dialog>
+  
+      <div class="filter__container">
+          <h3 class="title2 medium">Resumo financeiro</h3>
+          <div class="filter__buttons">
+            <button class="outline__button all__button">Todos</button>
+            <button class="outline__button entry__button">Entradas</button>
+            <button class="outline__button exit__button">Saídas</button>
+          </div>
+      </div>
+
+      <div class="sum__container">
+        <span class="text1 medium">Soma dos valores</span>
+        <span class="sum__item text1 medium">R$ 00,00</span>
+      </div>
+
+      <section class="resume__container">
+        <ul class="resume__list">
+
+
+        </ul>
+      </section>
+
+    </main>
+  </body>
+</html>
